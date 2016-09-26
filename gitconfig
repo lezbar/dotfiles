@@ -1,0 +1,27 @@
+[user]
+	name = Jaume Devesa
+	email = devvesa@gmail.com
+    signingkey = 35C2D6B2
+[credential]
+	helper = cache --timeout=3600
+[core]
+	editor = vim
+[color]
+	ui = true
+[alias]
+    st = status -sb
+    ci = commit
+    br = branch -v
+    co = checkout
+    df = diff
+    sl = shortlog --pretty=format:'%Cgreen%h%Creset - %Cred%an%Creset : %s'
+    standup = lg ––since yesterday
+	lg = log --pretty=format:'%Cgreen%H%Creset - %Cred%an%Creset : %s'
+    purr = pull --rebase
+    ready = rebase -i @{u}
+    fixup = commit --amend --no-edit
+[grep]
+    lineNumber = True     ; show line number by default in git grep
+    extendedRegex = True  ; --extended-regex by default
+[http]
+	sslverify = false
