@@ -22,6 +22,7 @@ Plugin 'tpope/vim-commentary'              " Easy comment lines `gcc` and `gc`
 Plugin 'scrooloose/syntastic'              " Syntax checking for many languages
 Plugin 'airblade/vim-gitgutter'            " Show which lines have changed from git
 Plugin 'altercation/vim-colors-solarized'  " Solarized theme
+Plugin 'fatih/vim-go'                      " Format go code
 call vundle#end()
 filetype on
 
@@ -32,7 +33,7 @@ let NERDTreeCaseSensitiveSort = 1
 let NERDTreeHighlightCursorline = 1
 let NERDTreeMouseMode = 2
 let NERDTreeShowBookmarks = 1
-let NERDTreeIgnore = ['\~$','\.pyc$','\py.class$']
+let NERDTreeIgnore = ['\~$','\.pyc$','\py.class$','\.sw[p|o]']
 let NERDTreeShowLineNumbers=0
 let NERDTreeDirArrows=0
 let NERDTreeAutoDeleteBuffer=1
@@ -68,6 +69,9 @@ let g:tagbar_width = 30
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+" Vim-go. Import and format
+let g:go_fmt_command = "goimports"
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
