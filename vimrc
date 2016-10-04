@@ -38,6 +38,7 @@ let NERDTreeShowLineNumbers=0
 let NERDTreeDirArrows=0
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeShowHidden = 1
+let NERDTreeWinSize = 30
 
 "  Goyo
 nnoremap <silent><F7> :Goyo<CR>
