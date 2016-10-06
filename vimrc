@@ -40,6 +40,7 @@ let NERDTreeShowLineNumbers=0
 let NERDTreeDirArrows=0
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeShowHidden = 1
+let NERDTreeWinSize = 30
 
 "  Airline
 set laststatus=2         " We should add this line to watch airline from the begging
