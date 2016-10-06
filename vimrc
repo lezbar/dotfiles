@@ -12,7 +12,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'              " Manage the plugins runtimepath and install new plugin
 Plugin 'tpope/vim-sensible'                " Manage mostly non-compatible options everyone agrees on
-Plugin 'junegunn/goyo.vim'                 " Fullscreen editing zen-mode
 Plugin 'scrooloose/nerdtree'               " Navigate across the files
 Plugin 'majutsushi/tagbar'                 " Tagbar right window
 Plugin 'tpope/vim-fugitive'                " Git commands and utilities
@@ -23,6 +22,9 @@ Plugin 'scrooloose/syntastic'              " Syntax checking for many languages
 Plugin 'airblade/vim-gitgutter'            " Show which lines have changed from git
 Plugin 'altercation/vim-colors-solarized'  " Solarized theme
 Plugin 'fatih/vim-go'                      " Format go code
+Plugin 'baskerville/bubblegum'             " Bubblegum colorscheme
+Plugin 'jnurmine/Zenburn'                  " Zenburn colorscheme
+Plugin 'morhetz/gruvbox'                   " Gruvbox colorscheme
 call vundle#end()
 filetype on
 
@@ -39,14 +41,12 @@ let NERDTreeDirArrows=0
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeShowHidden = 1
 
-"  Goyo
-nnoremap <silent><F7> :Goyo<CR>
-
 "  Airline
 set laststatus=2         " We should add this line to watch airline from the begging
 let g:airline_powerline_fonts=1
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+let g:airline_theme = 'gruvbox'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -93,10 +93,11 @@ set showcmd             " Display incomplete commands
 set showmode            " Show the current mode on the taskbar
 set cursorline          " Highlight the screenline of the cursor
 set number              " Show the number of the line
-set background=dark
-" colorscheme bubblegum   " Chosen colorscheme
 let g:solarized_termcolors=256
-colorscheme solarized
+" colorscheme bubblegum-256-dark
+" colorscheme zenburn
+colorscheme gruvbox
+set background=dark
 
 set splitbelow          " New vertical splits will place the new one below
 set splitright          " New horitzonal splits will place the new one on right
