@@ -1,6 +1,6 @@
 [user]
 	name = Jaume Devesa
-	email = devvesa@gmail.com
+	email = jaume@midokura.com
     signingkey = 35C2D6B2
 [credential]
 	helper = cache --timeout=3600

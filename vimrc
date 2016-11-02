@@ -25,6 +25,7 @@ Plugin 'fatih/vim-go'                      " Format go code
 Plugin 'baskerville/bubblegum'             " Bubblegum colorscheme
 Plugin 'jnurmine/Zenburn'                  " Zenburn colorscheme
 Plugin 'morhetz/gruvbox'                   " Gruvbox colorscheme
+Plugin 'derekwyatt/vim-scala'              " vim scala plugin
 call vundle#end()
 filetype on
 
@@ -138,6 +139,20 @@ if !exists("autocommands_loaded")
 endif
 
 augroup END
+
+" =========================
+" Swap files
+" =========================
+" swap files in a common location
+set dir=~/.vim/_swap/
+
+" backupfiles in a common location if possible
+set backup
+set backupdir=~/.vim/_backup/
+
+" turn on undo files and put them in a common location
+set undofile
+set undodir==~/.vim/_undo/
 
 " =========================
 " Interface-enabled options
